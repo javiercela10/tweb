@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<link href="home.css" rel="stylesheet" type="text/css"/>
+		<title>Registrarsi</title>
+		<script type="text/javascript">
+			function validar_datos() {
+				var check=true;
+
+				if (!document.getElementById("nombre_usuario").value) {
+					alert("Si bisogna il nome di utente!");
+					check=false;
+				}
+
+				if (!document.getElementById("contraseña").value) {
+					alert("Si bisogna il password!");
+					check=false;
+				}
+
+				if (check) {
+					document.getElementById("formulario_elegir").submit();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Registrazione</h1>
+			<span class="boton_volver">
+				<input type="submit" value="<< Ritornare" onclick="location='registrarse.html'"/>
+			</span>
+			<span class="botones">
+				<input type="submit" value="Login" onclick="location='pagina_login.html'"/>
+			</span>
+		</header>
+		<div>
+			<section class="formulario">
+				<form id="formulario_elegir" action="primer.php">
+					<head>Devi scegliere un nome di utente e un password:</head>
+					<br/>
+					<table>
+						<tr>
+							<td><label for="nombre_usuario">Nome di utente</label></td>
+							<td><input id="nombre_usuario" name="nombre_usuario" type="text" placeholder="Es: chiunque10" autofocus/></td>
+						</tr>
+						<tr>
+							<td><label for="contraseña">Password</label></td>
+							<td><input id="contraseña" name="contraseña" type="password"/></td>
+						</tr>
+						<tr>
+							<!--De momento lo unico que hace es llevarte a la pagina de inicio, pero hay que cambiarlo-->
+							<td><input type="button" onclick="validar_datos();" value="Registrarmi"/></td>
+						</tr>
+					</table>
+				</form>
+			</section>
+		</div>
+	</body>
+</html>

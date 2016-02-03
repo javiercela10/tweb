@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link href="home.css" rel="stylesheet" type="text/css"/>
+        <title>Questo e il proggetto finale di Javier Cela</title>
+        <script type='text/javascript'>
+                function desplegar_contraer(cual, desde) {
+                    var elElemento = document.getElementById(cual);
+                    if (elElemento.className == 'elementoVisible') {
+                        elElemento.className = 'elementoOculto';
+                        desde.className = 'linkContraido';
+                    } else {
+                        elElemento.className = 'elementoVisible';
+                        desde.className = 'linkExpandido';
+                    }
+                }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Benvenuti alla web di <abbr title="Javier Cela Lopez">JCL</abbr></h1>
+            <p id="par1">Qui potete tutte le ricette degli utenti, e anche condividere vostre</p>
+            <span class="botones">
+                <input type="submit" value="Registrarsi" onclick="location='registrarse.html'"/>
+                <span>
+                    <input type="submit" value="Login" onclick="location='pagina_login.html'"/>
+                </span>
+            </span>
+        </header>
+        <div>
+            <section id="sezioni">
+                <h2>Menu</h2>
+                <ul id="listaSecciones">
+                    <li>
+                        <a href="index.html" class="linkContraido">Home</a>
+                    </li>
+                    <li>
+                        <a onclick="desplegar_contraer('recetasDesplegables', this);" class="linkContraido">Tutte le ricette (+)</a>
+                        <!--De momento son todo links a ricette.html pero seran elementos onclick que al pulsarlos te llevaran a una 
+                            pagina creada con todos los platos que tengan como tipo el tipo correspondiente a cada plato (antipasti, primi
+                            piatti, etc-->
+                        <ul id="recetasDesplegables" class='elementoOculto'>
+                            <li><a href="ricette.html">Antipasti</a></li>
+                            <li><a href="ricette.html">Primi piatti</a></li>
+                            <li><a href="ricette.html">Secondi piatti e piatti unici</a></li>
+                            <li><a href="ricette.html">Postri</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a onclick="desplegar_contraer('busquedaDesplegable', this);" class="linkContraido">Cerca (+)</a>
+                        <!--Lo mismo pasa con esto. Despues seran onclicks que te llevaran a la pagina de cerca pero con las opciones de busqueda
+                            ya elegidas-->
+                        <ul id="busquedaDesplegable" class='elementoOculto'>
+                            <li><a href="cerca.html">Per nome</a></li>
+                            <li><a href="cerca.html">Per ingrediente</a></li>
+                            <li><a href="cerca.html">Per utente</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section id="contenuti">
+                <h3>Contenuti</h3>
+                <p>
+                    Qui potete condividere tuoi ricette e anche vedere quelli degli altri utenti!
+                    <br/>
+                    <br/>
+                    Se volete vedere qualche ricetta potete farlo senza registrarvi, ma per condividere tuoi ricette, valutare utenti o suoi ricette avete bisogno di registrarvi sulla pagina (non ci vogliono piu' di 5 minuti e ci sono tante vantaggi). Per gli utenti registrati anche sara' disponibile l'opzione di cercare ricette per nome, ingrediente oppure utente.
+                </p>
+            </section>
+        </div>
+    </body>
+</html>

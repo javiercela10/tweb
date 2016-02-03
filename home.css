@@ -1,0 +1,129 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-ene-2016, 19:05:31
+    Author     : javier
+*/
+/*Comuni a tutte le sezioni*/
+body {
+    /*background-color: darkolivegreen;*/
+    background-image: url("imgs/comida.jpg");
+    font-family: fantasy;
+}
+
+header {
+    text-align: center;
+    background-color: greenyellow;
+    padding: 2.5%;
+    margin: 2.5%;
+    height: auto;
+}
+
+div {
+    background-color: greenyellow;
+    padding: 2.5%;
+    margin: 2.5%;
+    height: 70%;
+}
+
+#recetasDesplegables, #busquedaDesplegable {
+    background-color: yellowgreen;
+    height: auto;
+}
+
+section {
+    font-size: 15;
+    background-color: yellowgreen;
+    height: auto;
+    width: auto;
+    float: left;
+    padding: 2.5%; 
+    margin: 2.5%;
+}
+
+.elementoVisible {
+    display:block;
+}
+
+.elementoOculto {
+    display:none;
+}
+
+.linkContraido, .linkExpandido {
+    font-style: bold;
+    cursor: pointer;
+    background-color: yellowgreen;
+    width: 50%;
+    height: auto;
+}
+
+/*Home.html*/
+h1, h2, h3 {
+    font-size: 20;   
+    font: bold 100% 200% fantasy;
+}
+
+
+
+#par1 {
+    text-align: center;
+}
+
+
+.botones {
+    background-color: greenyellow;
+    float: right;
+}
+
+#listaSecciones {
+    margin-left: 0px;
+    font-size:smaller;
+}
+
+#sezioni {
+    text-align: left;
+    width: 10%;
+    height: auto;
+}
+
+#contenuti {
+    width: 70%;
+}
+
+/*Registrarse.html*/
+
+.boton_volver {
+    float: left;
+}
+
+.formulario {
+    width: 90%;
+}
+
+#dia_nacimiento, #mes_nacimiento, #prefijo {
+    width: 40px;
+}
+
+#anyo_nacimiento {
+    width: 60px;
+}
+
+#direccion {
+    width: 250px;
+}
+
+#codigo_postal {
+    width: 70px;
+}
+
+#telefono {
+    width: 120px;
+}
+
+#info_adicional {
+    width: 500px;
+}
+

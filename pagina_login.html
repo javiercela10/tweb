@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link href="home.css" rel="stylesheet" type="text/css"/>
+        <title>Login</title>
+        <script type='text/javascript'>
+                function validar_datos() {
+                    var check=true;
+                    if (!document.getElementById("nombre_usuario").value) {
+                        alert("Si bisogna il nome di utente!");
+                        check=false;
+                    }
+
+                    if (!document.getElementById("contraseña").value) {
+                        alert("Si bisogna il password!");
+                        check=false;
+                    }
+
+                    if (check) {
+                        document.getElementById("formulario_elegir").submit();
+                    }
+                }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Login</h1>
+            <span class="boton_volver">
+                <input type="submit" value="<< Ritornare" onclick="location='registrarse.html'"/>
+            </span>
+            <span class="botones">
+                <input type="submit" value="Registrarsi" onclick="location='registrarse.html'"/>
+            </span>
+        </header>
+        <div>
+            <section class="formulario">
+                <form id="formulario_elegir" action="primer.php" method="post">
+                    <head>Devi introdurre tuo nome di utente e tuo password:</head>
+                    <br/>
+                    <table>
+                        <tr>
+                            <td><label for="nombre_usuario">Nome di utente</label></td>
+                            <td><input id="nombre_usuario" name="nombre_usuario" type="text" autofocus/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="contraseña">Password</label></td>
+                            <td><input id="contraseña" name="contraseña" type="password"/></td>
+                        </tr>
+                            <td><input type="button" onclick="validar_datos();" value="Registrarmi"/></td>
+                    </table>
+                </form>
+
+            </section>
+        </div>
+    </body>

@@ -1,0 +1,113 @@
+<html>
+
+	<head>
+		<link href="home.css" rel="stylesheet" type="text/css"/>
+		<title>Registrarsi</title>
+		<script type="text/javascript">
+			function validar_datos_registrar() {
+				var check=true;
+				/*Hay que mejorar esta funcion: que verifique fechas validas, por ejemplo*/
+				if (!document.getElementById("nombre").value) {
+					alert("Si bisogna il tuo nome!");
+					check=false;
+				} else if (!document.getElementById("apellido").value) {
+					alert("Si bisogna il tuo cognome!");
+					check=false;
+				} else if (!document.getElementById("email").value) {
+					alert("Si bisogna il email!");
+					check=false;
+				} else if (!document.getElementById("prefijo")) {
+					alert("Si bisogna il prefisso del numero di telefono!");
+					check=false;
+				} else if (!document.getElementById("telefono").value) {
+					alert("Si bisogna il numero di telefono!");
+					check=false;
+				}
+
+				if (!document.getElementById("nombre_usuario").value) {
+					alert("Si bisogna il nome di utente!");
+					check=false;
+				}
+
+				if (!document.getElementById("contraseña").value) {
+					alert("Si bisogna il password!");
+					check=false;
+				}
+
+				if (check) {
+					document.getElementById("formulario_registrar").submit();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Registrazione</h1>
+			<span class="boton_volver">
+				<input type="submit" value="<< Ritornare" onclick="location='index.html'"/>
+			</span>
+			<span class="botones">
+				<input type="submit" value="Login" onclick="location='pagina_login.html'"/>
+			</span>
+		</header>
+		<div>
+			<section class="formulario">
+				<head>Modulo di registrazione (tutti i campi con * sono obbligatori):</head>
+				<form id="formulario_registrar" action="primer.php" method="post">
+					<p>
+						<label for="nombre">Tuo nome*</label>
+						<input id="nombre" name="nombre" recquired="recquired" type="text" placeholder="Nome" autofocus/>
+
+						<label for="apellido">Tuo cognome*</label>
+						<input id="apellido" name="apellido" recquired="recquired" type="text" placeholder="Cognome"/>
+					</p>
+					<p>
+						<p>Data di nascita:</p>
+						<label for="dia_nacimiento">Giorno</label>
+						<input id="dia_nacimiento" name="dia_nacimiento" type="number" maxlength="2" placeholder="GG"/>
+						<label for="mes_nacimiento">Mese</label>
+						<input id="mes_nacimiento" name="mes_nacimiento" type="number" maxlength="2" placeholder="MM"/>
+						<label for="anyo_nacimiento">Agno</label>
+						<input id="anyo_nacimiento" name="anyo_nacimiento" type="number" maxlength="4" placeholder="AAAA"/>
+					</p>
+					<p>
+						<label for="direccion">Indirizzo</label>
+						<input id="direccion" name="direccion" type="text" placeholder="Via, scala/numero/blocco..."/>
+
+						<label for="codigo_postal">Codice postale</label>
+						<input id="codigo_postal" name="codigo_postal" type="number" maxlength="5" placeholder="XXXXX"/>
+
+						<label for="ciudad">Citta'</label>
+						<input id="ciudad" name="ciudad" type="text" placeholder="Citta'"/>
+
+						<laber for="pais">Paese</label>
+						<input id="pais" name="pais" type="text" placeholder="Paese"/>
+					</p>	
+					<p>
+						<label for="email">Indirizzo e-mail*</label>
+						<input id="email" name="email" recquired="recquired" type="text" placeholder="email@qualunque.it"/>
+					</p>
+					<p>
+						<label for="telefono">Numero di telefono*</label>
+						<input id="prefijo" name="prefijo" recquired="recquired" type="text" maxlength="3" placeholder="+39"/>
+						<input id="telefono" name="telefono" recquired="recquired" maxlength="10" type="number"/>
+					</p>
+					<p>
+						<label for="nombre_usuario">Nome di utente</label>
+						<input id="nombre_usuario" name="nombre_usuario" type="text" placeholder="Es: chiunque10"/>
+						<label for="contraseña">Password</label>
+						<input id="contraseña" name="contraseña" type="password"/>
+					</p>
+					<p>
+						<label for="info_adicional">Ulteriore informazione</lable>
+						<input id="info_adicional" name="info_adicional" type="text" placeholder="Cucina preferita, ingredienti piu' usati..."/>
+					</p>
+					<span>
+						<input type="button" onclick="validar_datos_registrar();" value="Avanti"/>
+					</span>
+				</form>
+			</section>
+		</div>	
+	</body>
+
+</html>
